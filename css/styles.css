@@ -1,0 +1,53 @@
+:root {
+    --tono: 324;
+    --complementario: 54;
+    --contraste: 214;
+
+    --color-principal: hsla(var(--tono), 100%, 45%, 1);
+    --color-principal-claro: hsla(var(--tono), 100%, 95%, 1);
+    --color-principal-medio: hsla(var(--tono), 100%, 80%, 1);    
+    --color-principal-oscuro: hsla(var(--tono), 100%, 15%, 1);
+
+    --color-complementario: hsla(var(--complementario), 100%, 45, 1);
+    --color-complementario-claro: hsla(var(--complementario), 100%, 95, 1);
+
+    --color-contraste-oscuro: hsla(var(--contraste), 15%, 10, 1);
+    --color-contraste-medio: hsla(var(--contraste), 20%, 40, 1);
+
+    --color-blanco: white;
+
+    --fuente-principal: 'DM Sans', sans-serif;
+    --fuente-titulos: 'Gloock', serif;
+
+    --light: 300;
+    --normal: 400;
+    --bold: 700;
+}
+
+span, p, a, h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    color: var(--color-contraste-oscuro);
+}
+
+.light {
+    font-weight: var(--light);
+}
+
+.normal {
+    font-weight: var(--normal);
+}
+
+.bold {
+    font-weight: var(--bold);
+}
+
+ul {
+    list-style: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-principal);
+}
