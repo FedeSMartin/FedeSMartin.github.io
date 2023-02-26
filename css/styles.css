@@ -330,11 +330,11 @@ h1 {
     margin-right: 10px;
 }
 
-.Info_Texto p:nth-child(1) {
+.info_Texto p:nth-child(1) {
     font-size: 10px;
 }
 
-.Info_Texto p:nth-child(2) {
+.info_Texto p:nth-child(2) {
     font-size: 12px;
     font-weight: var(--bold);
 }
@@ -459,7 +459,7 @@ info_experienciaEstudios td {
 
 @media screen and (min-width: 764px) {
 
-    /* diseño pagina1 */
+    /* diseño pagina1 para tablet */
 
     .banner {
         height: 35%;
@@ -552,7 +552,7 @@ info_experienciaEstudios td {
         border-radius: 20px 0 0 20px;
     }
 
-    /* diseño pagina2 */
+    /* diseño pagina2 para pantalla de tablet */
 
     .pagina2 {
         background-color: var(--color-blanco);
@@ -560,8 +560,8 @@ info_experienciaEstudios td {
         opacity: 1;
         min-height: 100vh;
         transition: .5s all ease-in-out;
-        left: 0%; /* 0% = visible - 100% = oculto*/
-        pointer-events: none;
+        left: 100%; /* 0% = visible - 100% = oculto*/
+        pointer-events: all;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 80px minmax(370px, 30vh) 170px;
@@ -597,7 +597,7 @@ info_experienciaEstudios td {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        transition: .2s ease-in-out;
+        transition: all .2s ease-in-out;
     }
 
     .header_icono {
@@ -646,11 +646,11 @@ info_experienciaEstudios td {
         margin-right: 10px;
     }
 
-    .Info_Texto p:nth-child(1) {
+    .info_Texto p:nth-child(1) {
         font-size: 15px;
     }
 
-    .Info_Texto p:nth-child(2) {
+    .info_Texto p:nth-child(2) {
         font-size: 20px;
         font-weight: var(--bold);
     }
@@ -684,7 +684,7 @@ info_experienciaEstudios td {
         line-height: 24px
     }
    
-    /* Diseño de pagina2 --> experiencia y estudios, para celular */
+    /* Diseño de pagina2 --> experiencia y estudios, para tablet */
 
     .experienciaEstudios {
         padding: 0 40px;
@@ -748,3 +748,356 @@ info_experienciaEstudios td {
         border-radius: 30px;
     }
 } 
+
+/* pantalla mas de 1024px (escritorio) */
+
+@media screen and (min-width: 1024px) {
+
+    /* diseño pagina1 para escritorio */
+
+    .pagina1{
+        display: flex;
+    }
+
+    .banner {
+        width: 40%;
+        height: 100%;
+        border-radius: 0 40px 40px 0;
+        background-position: 8.5% 0;
+        padding: 4rem;
+    }
+
+    .banner_Titulo h1 {
+        font-size: 5rem;
+    }
+
+    .banner_Titulo h3 {
+        font-size: 4rem;
+    }
+
+    .banner_Titulo h4 {
+        font-size: 3rem;
+    }
+
+    .section {
+        width: 55%;
+        padding: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section_Title {
+        margin-bottom: 2rem;
+    }
+
+    .section_Title h3 {
+        font-size: 3rem;
+    }
+
+    .section_Skills {
+        height: 40%;
+    }
+
+    .skill {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .skill_Txt h5, .skill_Txt span {
+        font-size: 1.75rem;
+    }
+
+    .skill_Loader_Ext {
+        padding: 12px;
+    }
+
+    .skill_Loader_Int {
+       padding: 10px;
+
+    }
+
+    .section_Botones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        min-height: 3.5rem;
+    }
+
+    .section_Botones a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .15rem;
+        background-color: var(--color-complementario);
+        padding: 2.5rem;
+        border-radius: 30px;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .section_Botones .bx {
+        font-size: 3.5rem;
+    }
+
+    .section_Botones a:nth-child(2) {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    
+    /* diseño pagina2 para pantalla de escritorio */
+
+    .pagina2 {
+        background-color: var(--color-blanco);
+        position: absolute;
+        opacity: 1;
+        min-height: 100vh;
+        transition: .5s all ease-in-out;
+        left: 100%; /* 0% = visible - 100% = oculto*/
+        pointer-events: all;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 120px minmax(70px, 27vh) minmax(150px, 25vh);
+    }
+
+    .visible {
+        left: 0%;
+        pointer-events: all;
+    }
+
+     /* header pagina2 para escritorio */
+
+     .header {
+        background: linear-gradient(90deg, hsla(var(--tono), 100%, 40%, 1) 0%, hsla(var(--complementario), 100%, 48%, 1) 100%);
+        height: 120px;
+        border-radius: 0 0 20px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 60px;
+        position: relative;
+        z-index: 2;
+        grid-column: 1/13;
+    }
+
+    .header_Logo {
+        width: 200px;
+    }
+
+    .header_a {
+        color: var(--color-blanco);
+        font-weight: var(--bold);
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all .2s ease-in-out;
+    }
+
+    .header_icono {
+        font-size: 70px;
+    }
+
+    .header_a:hover {
+        color: var(--color-contraste-oscuro);
+        transform: scale(0.9);
+    }
+
+    .info_Foto {
+        grid-column: 1/5;
+        grid-row: 2/5;
+        position: relative;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .info_FotoImg {
+        margin-top: -40px;
+        height: calc(100% + 40px);
+        width: 100%;
+        border-radius: 0 0 40px 0;
+        object-fit: cover;
+        object-position: 50%;
+    }
+
+    .info_Basica {
+        grid-column: 5/12;
+        padding: 40px 0 0 40px;
+    }
+
+    .info_Nombre {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .info_Nombre h1 {
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: var(--bold);
+        margin-right: 2rem;
+    }
+
+    .info_Nombre h4 {
+        font-size: 38px;
+        text-transform: uppercase;
+        font-weight: var(--light);
+        position: relative;
+    }
+
+    .info_Nombre h4:before {
+        content: "";
+        width: 3px;
+        height: 70%;
+        background-color: var(--color-contraste-oscuro);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -1rem;
+    }
+
+    .info_Ul {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .info_Li {
+        display: flex;
+        align-items: center;
+        margin-right: 35px;
+    }
+
+    .info_Icono i {
+        font-size: 40px;
+        margin-right: 10px;
+    }
+
+    .info_Texto p:nth-child(1){
+        font-size: 18px;
+    }
+
+    .info_Texto p:nth-child(2){
+        font-size: 24px;
+        font-weight: var(--bold);
+    }
+
+    /* Diseño de pagina2 --> experiencia y estudios, para escritorio */
+
+    .infoProfesional {
+        padding: 0 40px;
+        margin-bottom: 0px;
+        grid-column: 5/12;
+    }
+
+    .titulo_infoProfesional {
+        display: flex;
+        align-items: center;
+        margin-bottom: 7px;
+    }
+
+    .titulo_infoProfesional i {
+        font-size: 30px;
+        margin-right: 5px;
+    }
+
+    .titulo_infoProfesional h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+    .texto_infoProfesional p {
+        font-size: 20px;
+        font-weight: var(--light);
+        line-height: 36px
+    }
+
+    /* Diseño de pagina2 --> experiencia y estudios, para escritorio */
+
+    .experienciaEstudios {
+        padding: 0 40px;
+        grid-column: 5/12;
+        margin-bottom: 25px;
+    }
+
+    .titulo_experienciaEstudios {
+        display: flex;
+        align-items: center;
+        margin-bottom: 7px;
+    }
+
+    .titulo_experienciaEstudios i {
+        font-size: 30px;
+        margin-right: 5px;
+    }
+
+    .titulo_experienciaEstudios h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+    .info_experienciaEstudios {
+        font-size: 20px;
+    }
+
+    .info_experienciaEstudios td {
+        padding-bottom: 2px;
+    }
+
+    .experienciaEstudios_year {
+        font-weight: var(--bold);
+        padding-right: 15px;
+    }
+
+    /* barra flotante de redes sociales para tablet */
+
+    .redesSociales {
+        position: fixed;
+        bottom: inherit;
+        left: inherit;
+        right: 0rem;
+        top: 50%;
+        z-index: 3;
+        transform: translateY(-50%);
+        min-width: initial;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .texto_redesSociales {
+        background-color: var(--color-blanco);
+        position: fixed;
+        z-index: 3;
+        width: max-content;
+        right: 80px;
+        transform-origin: bottom right;
+        transform: rotate(-90deg) translateX(calc(50% + 1.75rem));
+        padding: 1rem 2rem .75rem 2rem;
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    .texto_redesSociales p {
+        font-size: 1.2rem;
+    }
+
+    .iconos_redesSociales {
+        display: flex;
+        flex-direction: column;
+        z-index: 4;
+        background-color: var(--color-contraste-oscuro);
+        gap: 3rem;
+        padding: 2rem .5rem 2rem 1rem;
+        border-radius: 2rem 0 0 2rem;
+    }
+
+    .iconos_redesSociales .bx {
+        font-size: 3.5rem;
+    }
+
+}
