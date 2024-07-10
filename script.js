@@ -1,6 +1,6 @@
 // Función para obtener los repositorios de GitHub
 async function fetchRepos() {
-    const response = await fetch('https://api.github.com/users/<tu-usuario>/repos');
+    const response = await fetch('https://api.github.com/users/fedesmartin/repos');
     const repos = await response.json();
     displayRepos(repos);
 }
