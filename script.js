@@ -15,7 +15,7 @@ function displayRepos(repos) {
         repoElement.className = 'repo';
         
         // Comprobar si el repo tiene el topic "development"
-        const isInDevelopment = repo.topics.includes('inDevelopment');
+        const isInDevelopment = repo.topics.includes('indevelopment');
         
         repoElement.innerHTML = `
             <h2>${repo.name}</h2>
