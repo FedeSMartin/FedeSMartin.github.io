@@ -1,6 +1,6 @@
 // Función para obtener los repositorios de GitHub
 async function fetchRepos() {
-    const response = await fetch('https://api.github.com/users/fedesmartin/repos');
+    const response = await fetch('https://api.github.com/users/<tu-usuario>/repos');
     const repos = await response.json();
     displayRepos(repos);
 }
@@ -8,7 +8,9 @@ async function fetchRepos() {
 // Función para mostrar los repositorios en la página
 function displayRepos(repos) {
     const reposContainer = document.getElementById('repos-container');
-    repos.forEach(repo => {
+    // Filtrar los repositorios que terminan con "_pf"
+    const filteredRepos = repos.filter(repo => repo.name.endsWith('_pf'));
+    filteredRepos.forEach(repo => {
         const repoElement = document.createElement('div');
         repoElement.className = 'repo';
         repoElement.innerHTML = `
