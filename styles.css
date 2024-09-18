@@ -1,10 +1,11 @@
 body {
-    background-color: hsl(39, 33%, 81%);
+    background: rgb(210,205,176);
+    background: radial-gradient(circle, rgba(210,205,176,1) 0%, rgba(186,182,159,1) 79%, rgba(163,160,142,1) 100%);
     color: hsl(0, 0%, 22%);
     font-family: "Hind Madurai", sans-serif;
     font-weight: 400;
     font-style: normal;
-    text-decoration: none;
+    text-align: center;
 }
 
 h1 {
@@ -12,4 +13,30 @@ h1 {
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
+    text-shadow: 5px 5px 10px rgba(47, 47, 47, 0.2);
+    padding: 2rem;
+}
+
+div {
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(0, 0%, 13%);
+}
+
+#footer {
+    text-align: center;
+    padding: 10px;
+    background-color: hsl(43, 4%, 39%);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#leyenda {
+    font-size: 14px;
+    color: hsl(36, 5%, 79%);
 }

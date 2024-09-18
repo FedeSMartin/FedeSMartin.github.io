@@ -1,10 +1,14 @@
-// Función para obtener los repositorios de GitHub con el topic "portfolio"
 async function fetchRepos() {
     const username = 'fedesmartin';
     const url = `https://api.github.com/search/repositories?q=user:${username}+topic:portfolio`;
     const response = await fetch(url);
     const result = await response.json();
     displayRepos(result.items);
+    
+    // Mueve estas líneas dentro de la función
+    const leyenda = document.getElementById('leyenda');
+    const añoActual = new Date().getFullYear();
+    leyenda.textContent = `Federico Martin, Backend Dev - ${añoActual}`; // Actualiza el contenido
 }
 
 // Función para mostrar los repositorios en la página
